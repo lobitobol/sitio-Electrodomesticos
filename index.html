@@ -12,10 +12,15 @@
         }
 
         :root {
-            --primary: #FF4F1B;
+            --primary: #1a1a1a;
+            --primary-light: #2c2c2c;
+            --primary-dark: #000000;
+            --accent: #555555;
             --dark: #1a1a1a;
-            --gray: #f8f9fa;
-            --text: #333;
+            --gray: #ffffff;
+            --gray-light: #f5f5f5;
+            --text: #1a1a1a;
+            --text-light: #666666;
             --border: #e0e0e0;
         }
 
@@ -53,10 +58,7 @@
         .logo {
             font-size: 2.2rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary);
             text-decoration: none;
             letter-spacing: -0.5px;
         }
@@ -85,7 +87,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             transition: width 0.25s;
         }
 
@@ -228,10 +230,7 @@
         .sidebar-logo {
             font-size: 1.5rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary);
         }
 
         .close-btn {
@@ -269,7 +268,7 @@
 
         .sidebar-menu a:hover,
         .sidebar-menu a.active {
-            background: #fff5f0;
+            background: var(--gray-light);
             color: var(--primary);
             padding-left: 2rem;
         }
@@ -330,16 +329,13 @@
         .hero h1 {
             font-size: 4rem;
             margin-bottom: 2rem;
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary);
             font-weight: 900;
         }
 
         .hero p {
             font-size: 1.5rem;
-            color: #666;
+            color: var(--text-light);
             margin-bottom: 3rem;
             font-weight: 300;
         }
@@ -347,7 +343,7 @@
         .btn {
             display: inline-block;
             padding: 1.3rem 3.5rem;
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             color: white;
             text-decoration: none;
             border: none;
@@ -355,13 +351,14 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 79, 27, 0.3);
+            box-shadow: 0 4px 15px rgba(26, 26, 26, 0.2);
             font-size: 1.15rem;
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 79, 27, 0.4);
+            box-shadow: 0 6px 20px rgba(26, 26, 26, 0.3);
+            background: var(--primary-light);
         }
 
         .btn:active {
@@ -422,12 +419,12 @@
         }
 
         .select-trigger:hover {
-            background: #fff5f0;
-            box-shadow: 0 2px 8px rgba(255, 79, 27, 0.15);
+            background: var(--gray-light);
+            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.1);
         }
 
         .select-trigger.active {
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             color: white;
             border-color: transparent;
         }
@@ -451,7 +448,7 @@
             background: white;
             border: 2px solid var(--primary);
             border-radius: 10px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 24px rgba(26, 26, 26, 0.15);
             z-index: 1000;
             max-height: 0;
             overflow: hidden;
@@ -480,12 +477,12 @@
         }
 
         .select-dropdown::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             border-radius: 10px;
         }
 
         .select-dropdown::-webkit-scrollbar-thumb:hover {
-            background: #FF4F1B;
+            background: var(--primary-dark);
         }
 
         /* Opciones */
@@ -500,13 +497,13 @@
         }
 
         .select-option:hover {
-            background: #fff5f0;
+            background: var(--gray-light);
             color: var(--primary);
             padding-left: 1.5rem;
         }
 
         .select-option.selected {
-            background: linear-gradient(135deg, rgba(255, 79, 27, 0.1) 0%, rgba(255, 107, 61, 0.1) 100%);
+            background: rgba(26, 26, 26, 0.08);
             color: var(--primary);
             font-weight: 700;
             border-left: 4px solid var(--primary);
@@ -541,7 +538,7 @@
 
         .search-box button {
             padding: 1rem 2rem;
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             color: white;
             border: none;
             border-radius: 8px;
@@ -554,6 +551,7 @@
 
         .search-box button:hover {
             transform: translateY(-2px);
+            background: var(--primary-light);
         }
 
         .filters {
@@ -583,10 +581,10 @@
         }
 
         .filter-btn.active {
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             color: white;
             border-color: transparent;
-            box-shadow: 0 4px 12px rgba(255, 79, 27, 0.3);
+            box-shadow: 0 4px 12px rgba(26, 26, 26, 0.2);
         }
 
         .products-grid {
@@ -621,6 +619,24 @@
             justify-content: center;
             overflow: hidden;
             cursor: pointer;
+            position: relative;
+        }
+
+        .product-views-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(26, 26, 26, 0.85);
+            color: white;
+            padding: 0.5rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .product-image img {
@@ -665,7 +681,7 @@
 
         .product-desc {
             font-size: 1rem;
-            color: #888;
+            color: var(--text-light);
             margin-bottom: 1.2rem;
             flex: 1;
             line-height: 1.4;
@@ -681,10 +697,7 @@
         .product-price {
             font-size: 1.7rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary);
         }
 
         .price-currency {
@@ -693,8 +706,17 @@
             margin-right: 0.3rem;
         }
 
+        .product-views {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
         .btn-add {
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             color: white;
             padding: 1rem 1.5rem;
             border: none;
@@ -704,11 +726,12 @@
             font-size: 1.05rem;
             transition: all 0.25s;
             width: 100%;
-            box-shadow: 0 2px 8px rgba(255, 79, 27, 0.2);
+            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.15);
         }
 
         .btn-add:hover {
             transform: translateY(-2px);
+            background: var(--primary-light);
         }
 
         .btn-add:active {
@@ -737,7 +760,7 @@
         }
 
         .cart-header {
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             color: white;
             padding: 1.5rem;
             display: flex;
@@ -792,7 +815,7 @@
         }
 
         .cart-item:hover {
-            background: #fff5f0;
+            background: var(--gray-light);
         }
 
         .cart-item-name {
@@ -805,7 +828,7 @@
             display: flex;
             justify-content: space-between;
             font-size: 0.95rem;
-            color: #666;
+            color: var(--text-light);
             margin-bottom: 0.5rem;
         }
 
@@ -847,7 +870,7 @@
             justify-content: space-between;
             margin-bottom: 0.8rem;
             font-size: 1rem;
-            color: #666;
+            color: var(--text-light);
         }
 
         .cart-total {
@@ -878,13 +901,14 @@
         }
 
         .btn-checkout {
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             color: white;
-            box-shadow: 0 4px 12px rgba(255, 79, 27, 0.3);
+            box-shadow: 0 4px 12px rgba(26, 26, 26, 0.2);
         }
 
         .btn-checkout:hover {
             transform: translateY(-2px);
+            background: var(--primary-light);
         }
 
         .btn-continue {
@@ -907,21 +931,33 @@
             animation: fadeIn 0.5s ease;
         }
 
-        .detail-image {
+        .detail-image-wrapper {
+            position: relative;
             width: 100%;
             height: 500px;
+        }
+
+        .detail-image {
+            width: 100%;
+            height: 100%;
             background: #f5f5f5;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            cursor: pointer;
         }
 
         .detail-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .detail-image:hover img {
+            transform: scale(1.05);
         }
 
         .detail-info h1 {
@@ -941,10 +977,7 @@
         .detail-price {
             font-size: 2.8rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--primary);
             margin-bottom: 1.8rem;
         }
 
@@ -954,11 +987,23 @@
             margin-right: 0.4rem;
         }
 
-        .detail-desc {
+        .detail-views {
+            font-size: 1rem;
             color: #666;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .detail-desc {
+            color: var(--text-light);
             line-height: 1.8;
             margin-bottom: 2rem;
             font-size: 0.95rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
 
         .detail-qty {
@@ -1043,7 +1088,7 @@
         }
 
         .seller-value {
-            color: #666;
+            color: var(--text-light);
         }
 
         .seller-buttons {
@@ -1052,7 +1097,7 @@
 
         .btn-location {
             display: inline-block;
-            background: linear-gradient(135deg, #FF4F1B 0%, #FF6B3D 100%);
+            background: var(--primary);
             color: white;
             padding: 0.85rem 1.8rem;
             text-decoration: none;
@@ -1060,11 +1105,12 @@
             font-weight: 600;
             font-size: 0.95rem;
             transition: all 0.25s;
-            box-shadow: 0 2px 8px rgba(255, 79, 27, 0.2);
+            box-shadow: 0 2px 8px rgba(26, 26, 26, 0.15);
         }
 
         .btn-location:hover {
             transform: translateY(-2px);
+            background: var(--primary-light);
         }
 
         /* FOOTER */
@@ -1275,6 +1321,11 @@
                 height: 300px;
             }
 
+            .zoom-loupe {
+                width: 150px;
+                height: 150px;
+            }
+
             .detail-info h1 {
                 font-size: 1.6rem;
                 margin-bottom: 0.5rem;
@@ -1461,6 +1512,17 @@
                 height: 250px;
             }
 
+            .zoom-toggle {
+                width: 40px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .zoom-loupe {
+                width: 120px;
+                height: 120px;
+            }
+
             .detail-info h1 {
                 font-size: 1.4rem;
                 margin-bottom: 0.4rem;
@@ -1642,8 +1704,8 @@
 
         <!-- CONTACT -->
         <section id="contact">
-            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">Contacto</h2>
-            <p style="color: #666; margin-bottom: 2rem; font-size: 1rem;">Visita cualquiera de nuestras sucursales:</p>
+            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: var(--primary);">Contacto</h2>
+            <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 1rem;">Visita cualquiera de nuestras sucursales:</p>
             <div class="sellers-grid" id="sellersGrid">
                 <div class="loading">⏳ Cargando...</div>
             </div>
@@ -1660,12 +1722,12 @@
     <a href="https://wa.me/591XXXXXXXXX?text=Hola%20ElectroStore%2C%20tengo%20una%20consulta" target="_blank" class="whatsapp-btn" title="Contactar por WhatsApp">💬</a>
 
     <script>
-        const API_URL = "https://script.google.com/macros/s/AKfycby_ATFfdUOsgcKE1oj2c3VMuPZXQVaIV-7nGZoePIlqH2N5CF3-me-XmLNZeZPJHtGoEA/exec";
+        const API_URL = "https://script.google.com/macros/s/AKfycbwu0qTFsFk3Q231Qfg72GMc0keo6D4TDtqj1rLVVBGqlK8ABKcP_eJL-If0LWxH29_JYA/exec";
         
         let products = [];
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let currency = 'USD'; // Siempre por defecto USD
-        let currencies = { USD: { valor: 1, abreviatura: '$' } };
+        let currency = null; // Se asignará al primer TipoCambio
+        let currencies = {};
         let currentProduct = null;
         let lastProductCount = 0;
         let lastCurrencyCheck = {};
@@ -1675,9 +1737,8 @@
 
         // INIT
         document.addEventListener('DOMContentLoaded', () => {
-            // Asegurar que siempre sea USD por defecto
-            localStorage.setItem('currency', 'USD');
-            document.getElementById('currencyTrigger').textContent = 'USD';
+            // Limpiar historial para evitar pantalla en blanco
+            history.replaceState({ page: 'index' }, 'ElectroStore', window.location.href);
             
             loadCurrencies();
             loadProducts();
@@ -1689,6 +1750,15 @@
                 checkProductUpdates();
                 checkCurrencyUpdates();
             }, 3000);
+
+            // Evitar que el navegador vaya a about:blank
+            window.addEventListener('popstate', (e) => {
+                if (!e.state || !e.state.page) {
+                    // Si no hay estado, ir a home
+                    goToSection('home');
+                    history.replaceState({ page: 'home' }, 'ElectroStore', window.location.href);
+                }
+            });
         });
 
         function setupMenus() {
@@ -1739,6 +1809,9 @@
             document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
             document.getElementById(section).classList.add('active');
             
+            // Reemplazar historial para evitar pantalla en blanco
+            history.replaceState({ page: section }, `ElectroStore - ${section}`, window.location.href);
+            
             if (section === 'catalog' && products.length === 0) {
                 loadProducts();
             }
@@ -1748,33 +1821,80 @@
             window.scrollTo(0, 0);
         }
 
+        /**
+         * Formatea número con puntos cada 3 dígitos
+         * 1232323 → 1.232.323
+         */
+        function formatPrice(num) {
+            return Math.floor(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        }
+
         function loadCurrencies() {
             fetch(API_URL + "?action=getCambios")
                 .then(r => r.json())
                 .then(data => {
                     console.log("📊 Datos de cambios recibidos:", data);
-                    if (data.success) {
+                    if (data.success && data.cambios) {
                         const dropdown = document.getElementById('currencyDropdown');
-                        dropdown.innerHTML = '<div class="select-option selected" data-value="USD">USD</div>';
+                        dropdown.innerHTML = '';
                         
-                        data.cambios.forEach(c => {
-                            console.log(`Procesando: ${c.moneda} - Abreviatura: "${c.abreviatura}"`);
+                        // USD por defecto
+                        currencies['USD'] = {
+                            valor: 1,
+                            abreviatura: '$',
+                            cantidadRedondeo: 0,
+                            tipoPrecio: 'Precio_producto_minorista'
+                        };
+                        
+                        // Agregar primer cambio como seleccionado
+                        let firstCurrency = null;
+                        data.cambios.forEach((c, index) => {
+                            console.log(`Procesando: ${c.moneda} - Abreviatura: "${c.abreviatura}" - Redondeo: ${c.cantidadRedondeo}`);
                             currencies[c.moneda] = { 
-                                valor: c.valor, 
-                                abreviatura: c.abreviatura && c.abreviatura.trim() ? c.abreviatura.trim() : c.moneda.substring(0, 3).toUpperCase()
+                                valor: parseFloat(c.valor) || 1, 
+                                abreviatura: c.abreviatura && c.abreviatura.trim() ? c.abreviatura.trim() : c.moneda.substring(0, 3).toUpperCase(),
+                                cantidadRedondeo: parseInt(c.cantidadRedondeo) || 0,
+                                tipoPrecio: c.tipoPrecio || 'Precio_producto_minorista'
                             };
                             console.log(`✅ Guardado: ${c.moneda} → ${currencies[c.moneda].abreviatura}`);
+                            
+                            // Guardar primer cambio
+                            if (index === 0) {
+                                firstCurrency = c.moneda;
+                            }
                             
                             const option = document.createElement('div');
                             option.className = 'select-option';
                             option.setAttribute('data-value', c.moneda);
                             option.textContent = c.moneda;
+                            if (index === 0) {
+                                option.classList.add('selected');
+                            }
                             option.addEventListener('click', () => selectCurrency(c.moneda));
                             dropdown.appendChild(option);
                         });
                         
+                        // Seleccionar primer cambio por defecto
+                        if (firstCurrency) {
+                            currency = firstCurrency;
+                            document.getElementById('currencyTrigger').textContent = firstCurrency;
+                            console.log(`🔄 Moneda por defecto: ${currency}`);
+                        }
+                        
                         setupCurrencySelect();
+                        // Actualizar precios después de cargar monedas
+                        if (products.length > 0) {
+                            renderProducts(products);
+                        }
+                        renderCart();
+                    } else {
+                        console.error('❌ Error en respuesta de cambios:', data);
+                        notify('⚠️ Error cargando monedas');
                     }
+                })
+                .catch(err => {
+                    console.error('❌ Error al cargar cambios:', err);
+                    notify('⚠️ No puedo conectar con la API');
                 });
         }
 
@@ -1799,7 +1919,6 @@
 
         function selectCurrency(moneda) {
             currency = moneda;
-            localStorage.setItem('currency', currency);
             
             // Actualizar UI
             document.getElementById('currencyTrigger').textContent = moneda;
@@ -1822,11 +1941,20 @@
             fetch(API_URL + "?action=getAll")
                 .then(r => r.json())
                 .then(data => {
-                    if (data.success) {
+                    console.log("📦 Datos recibidos:", data);
+                    if (data.success && data.productos) {
                         products = data.productos;
-                        renderFilters();
+                        lastProductCount = products.length;
                         renderProducts(products);
+                        renderFilters();
+                    } else {
+                        console.error('❌ Error en respuesta de productos:', data);
+                        document.getElementById('productsGrid').innerHTML = '<div class="loading">⚠️ Error cargando productos</div>';
                     }
+                })
+                .catch(err => {
+                    console.error('❌ Error al cargar productos:', err);
+                    document.getElementById('productsGrid').innerHTML = '<div class="loading">⚠️ No puedo conectar con la API</div>';
                 });
         }
 
@@ -1956,13 +2084,15 @@
                 <div class="product-card">
                     <div class="product-image" onclick="showDetail(${i})">
                         <img src="https://drive.google.com/thumbnail?id=${p.idImagen}&sz=w1000" alt="${p.nombre}">
+                        <div class="product-views-badge">👁️ ${p.vistas || 0}</div>
                     </div>
                     <div class="product-body">
                         <div class="product-category">${p.categoria}</div>
                         <div class="product-name" onclick="showDetail(${i})">${p.nombre}</div>
                         <div class="product-desc">${p.descripcion.substring(0, 60)}...</div>
                         <div class="product-footer">
-                            <div class="product-price"><span class="price-currency">${getSymbol()}</span> ${convertPrice(p.precio).toFixed(2)}</div>
+                            <div class="product-price"><span class="price-currency">${getSymbol()}</span> ${formatPrice(convertPrice(p))}</div>
+                            <div class="product-views">👁️ ${p.vistas || 0}</div>
                         </div>
                         <button class="btn-add" onclick="addToCart(${i})">Agregar</button>
                     </div>
@@ -1990,16 +2120,19 @@
         function showDetail(i) {
             currentProduct = products[i];
             const p = currentProduct;
-            document.getElementById('detailContent').innerHTML = `
+            const detailHTML = `
                 <div class="detail-container">
-                    <div class="detail-image">
-                        <img src="https://drive.google.com/thumbnail?id=${p.idImagen}&sz=w1000" alt="${p.nombre}">
+                    <div class="detail-image-wrapper">
+                        <div class="detail-image" id="detailImageContainer">
+                            <img id="detailImg" src="https://drive.google.com/thumbnail?id=${p.idImagen}&sz=w1000" alt="${p.nombre}">
+                        </div>
                     </div>
                     <div class="detail-info">
                         <div class="detail-category">${p.categoria}</div>
                         <h1>${p.nombre}</h1>
-                        <div class="detail-price"><span class="price-currency">${getSymbol()}</span> ${convertPrice(p.precio).toFixed(2)}</div>
-                        <div class="detail-desc">${p.descripcion}</div>
+                        <div class="detail-price"><span class="price-currency">${getSymbol()}</span> ${formatPrice(convertPrice(p))}</div>
+                        <div class="detail-views">👁️ ${p.vistas || 0} vistas</div>
+                        <div class="detail-desc" id="detailDescContent"></div>
                         <div class="detail-qty">
                             <label>Cantidad:</label>
                             <input type="number" id="qtyInput" min="1" value="1">
@@ -2011,7 +2144,36 @@
                     </div>
                 </div>
             `;
+            document.getElementById('detailContent').innerHTML = detailHTML;
+            // Usar textContent para la descripción para respetar espacios sin HTML injection
+            document.getElementById('detailDescContent').textContent = p.descripcion;
+            
+            // Incrementar vistas
+            incrementarVistas(p);
+            
             goToSection('detail');
+        }
+
+        function incrementarVistas(producto) {
+            // Hacer POST al backend para incrementar vistas
+            const datos = {
+                action: 'incrementarVistas',
+                row: producto.row
+            };
+            
+            fetch(API_URL, {
+                method: 'POST',
+                body: JSON.stringify(datos)
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.success) {
+                    console.log('👁️ Vistas incrementadas:', data.vistasActual);
+                } else {
+                    console.error('❌ Error incrementando vistas:', data.error);
+                }
+            })
+            .catch(err => console.error('Error en incrementarVistas:', err));
         }
 
         function filterProducts(btn) {
@@ -2040,9 +2202,40 @@
             // Función ya no se usa - reemplazada por selectCurrency()
         }
 
-        function convertPrice(usd) {
+        /**
+         * Obtiene el precio correcto (mayorista o minorista) según tipoPrecio
+         */
+        function getPriceForCurrency(product) {
             const currencyData = currencies[currency];
-            return usd * (currencyData.valor || 1);
+            const tipoPrecio = currencyData.tipoPrecio || 'Precio_producto_minorista';
+            
+            // Seleccionar el precio correcto
+            let basePrice = 0;
+            if (tipoPrecio.toLowerCase().includes('mayorista')) {
+                basePrice = product.precioMayorista || product.precioMinorista || 0;
+            } else {
+                basePrice = product.precioMinorista || product.precioMayorista || 0;
+            }
+            
+            return basePrice;
+        }
+
+        /**
+         * Convierte precio a moneda seleccionada y aplica redondeo
+         */
+        function convertPrice(product) {
+            const currencyData = currencies[currency];
+            const basePrice = getPriceForCurrency(product);
+            const convertedPrice = basePrice * (currencyData.valor || 1);
+            
+            // Aplicar redondeo según cantidadRedondeo
+            const cantidadRedondeo = currencyData.cantidadRedondeo || 0;
+            if (cantidadRedondeo > 0) {
+                const multiplicador = Math.pow(10, cantidadRedondeo);
+                return Math.round(convertedPrice / multiplicador) * multiplicador;
+            }
+            
+            return Math.round(convertedPrice); // Retornar como entero
         }
 
         function getSymbol() {
@@ -2061,7 +2254,12 @@
             if (existing) {
                 existing.qty++;
             } else {
-                cart.push({ id: p.idImagen, name: p.nombre, price: p.precio, qty: 1 });
+                cart.push({ 
+                    id: p.idImagen, 
+                    name: p.nombre, 
+                    product: p, // Guardar producto completo para convertir precio después
+                    qty: 1 
+                });
             }
             saveCart();
             notify('✓ Agregado al carrito');
@@ -2074,7 +2272,12 @@
             if (existing) {
                 existing.qty += qty;
             } else {
-                cart.push({ id: p.idImagen, name: p.nombre, price: p.precio, qty });
+                cart.push({ 
+                    id: p.idImagen, 
+                    name: p.nombre, 
+                    product: p,
+                    qty 
+                });
             }
             saveCart();
             notify('✓ Agregado al carrito');
@@ -2095,21 +2298,27 @@
             const content = document.getElementById('cartItems');
             if (cart.length === 0) {
                 content.innerHTML = '<div class="cart-empty">🛍️ Tu carrito está vacío</div>';
-                document.getElementById('subtotal').textContent = getSymbol() + ' 0.00';
-                document.getElementById('cartTotal').textContent = getSymbol() + ' 0.00';
+                document.getElementById('subtotal').textContent = getSymbol() + ' 0';
+                document.getElementById('cartTotal').textContent = getSymbol() + ' 0';
                 return;
             }
 
             let total = 0;
             content.innerHTML = cart.map((item, i) => {
-                const price = convertPrice(item.price);
+                // Compatibilidad: si no tiene product, crear uno temporal
+                const prod = item.product || {
+                    precioMayorista: item.price || 0,
+                    precioMinorista: item.price || 0
+                };
+                
+                const price = convertPrice(prod);
                 const subtotal = price * item.qty;
                 total += subtotal;
                 return `
                     <div class="cart-item">
                         <div class="cart-item-name">${item.name}</div>
                         <div class="cart-item-details">
-                            <span>${getSymbol()} ${price.toFixed(2)}</span>
+                            <span>${getSymbol()} ${formatPrice(price)}</span>
                             <span>x${item.qty}</span>
                         </div>
                         <div class="cart-item-details">
@@ -2122,8 +2331,8 @@
                 `;
             }).join('');
 
-            document.getElementById('subtotal').textContent = getSymbol() + ' ' + total.toFixed(2);
-            document.getElementById('cartTotal').textContent = getSymbol() + ' ' + total.toFixed(2);
+            document.getElementById('subtotal').textContent = getSymbol() + ' ' + formatPrice(total);
+            document.getElementById('cartTotal').textContent = getSymbol() + ' ' + formatPrice(total);
         }
 
         function updateQty(i, val) {
@@ -2150,9 +2359,18 @@
             closeCart();
         }
 
+        function limpiarCarrito() {
+            if (confirm('¿Seguro que quieres vaciar el carrito?')) {
+                cart = [];
+                saveCart();
+                renderCart();
+                notify('✓ Carrito vaciado');
+            }
+        }
+
         function notify(msg) {
             const div = document.createElement('div');
-            div.style.cssText = 'position:fixed;top:20px;right:20px;background:linear-gradient(135deg,#FF4F1B,#FF6B3D);color:white;padding:1rem 1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(255,79,27,0.3);z-index:2000;font-weight:600;animation:slideIn 0.3s ease;';
+            div.style.cssText = 'position:fixed;top:20px;right:20px;background:#1a1a1a;color:white;padding:1rem 1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(26,26,26,0.3);z-index:2000;font-weight:600;animation:slideIn 0.3s ease;';
             div.textContent = msg;
             document.body.appendChild(div);
             setTimeout(() => div.remove(), 2500);
